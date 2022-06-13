@@ -24,5 +24,5 @@ class Program
         {
             Console.Write(array[i] + " ");
         }
-    }
+    } 
 }
