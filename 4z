@@ -1,0 +1,41 @@
+class Program
+{
+    static void Main(string[] args)
+    {
+ Console.WriteLine("Введите промежуток");
+ int prom = Convert.ToInt32(Console.ReadLine());
+ Console.WriteLine("Введите число попыток");
+ int popit = Convert.ToInt32(Console.ReadLine());
+ int count = 0;
+ Random r = new Random();
+ int z = r.Next(1, prom);
+ 
+for (int j = 0; j < popit; j++)
+{
+Console.WriteLine("Введите число");
+int c = Convert.ToInt32(Console.ReadLine());
+ if (c == z)
+{
+Console.WriteLine("Ура победа");
+break;
+}
+else
+{
+ if (c > z)
+ {
+ Console.WriteLine("меньше");
+count += 1;
+ }
+ else
+{
+ Console.WriteLine("больше");
+ count += 1;
+ }
+ }
+ }
+ if (popit == count)
+{
+ Console.WriteLine("Неудача попробуй снова");
+}
+}
+}
