@@ -1,0 +1,22 @@
+class Program
+{
+    static void Main(string[] args)
+    {
+      double x, y,sum;
+        Console.WriteLine("введите день недели");
+        x = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("введите время в  минутах");
+        y = Convert.ToDouble(Console.ReadLine());
+        if (x>5)
+        {
+            sum = y * 0.8;
+        }
+        else
+        {
+            sum = y;
+        }
+        Console.WriteLine("надо будет заплатить за " + sum + " минут разговора");
+
+
+    }
+}
