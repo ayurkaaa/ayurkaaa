@@ -1,0 +1,21 @@
+class Program
+{
+static void Main()
+{
+int c1 = 0;
+int c2 = 0;
+int sum = 0;
+String StringNumber = Console.ReadLine();
+Char[] CharNumber = StringNumber.ToCharArray();
+c1 = Convert.ToInt32(StringNumber[0] - '0');
+for (int i = 0; i < CharNumber.Length; i++)
+{
+c2 = Convert.ToInt32(StringNumber[i] - '0');
+}
+sum = c1 + c2;
+
+Console.WriteLine("Число " + StringNumber);
+Console.WriteLine("сумма первого и последнего числа равна = " + sum);
+Console.ReadKey();
+}
+}
