@@ -1,0 +1,27 @@
+int n = 26;
+double[] array37 = new double[n];
+Random randNumb = new Random();
+double max = 0;
+for (int i = 0; i < array37.Length; i++)
+{
+    array37[i] = randNumb.Next(0, 10);
+    Console.Write(array37[i] + " ");
+}
+Console.WriteLine();
+int count = 0;
+for (int i = 0; i < n; i++)
+{
+    if (array37[i] > max)
+    {
+        max = array37[i];
+    }
+}
+for (int i = 1; i < n - 1; i++)
+{
+    if (Math.Pow(array37[i - 1], 2) + Math.Pow(array37[i + 1], 2) == array37[i] && array37[i] < max)
+    {
+        count++;
+        Console.WriteLine("число под номером " + (i+1));
+    }
+
+}
