@@ -1,0 +1,21 @@
+class Program
+{
+    static void Main()
+    {
+        double c = 0;
+        int count = 0;
+        String StringNumber = Console.ReadLine();
+        Char[] CharNumber = StringNumber.ToCharArray();
+        for (int i = 1; i < CharNumber.Length+1; i++)
+        {
+            c = Convert.ToInt32(StringNumber[^i] - '0');
+          if (c==3)
+            {
+                count = i;         
+                break;
+            }
+        }
+       
+        Console.WriteLine(count);
+    }
+}
